@@ -1,2 +1,3 @@
-# use_font_without_install_on_win
-Source code for the article of Use Font Without Installing on Windows First
+# How to Use a Font Without Installing it
+
+Source code for the CodeProject article of [How to Use a Font Without Installing it](https://www.codeproject.com/Articles/42041/How-to-Use-a-Font-Without-Installing-it)

@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TTFNameLibrary", "TTFNameLibrary\TTFNameLibrary.vcproj", "{838EA109-BDC7-4242-A9FB-39240980BAF7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestGDI_AddFontMem", "TestGDI_AddFontMem\TestGDI_AddFontMem.vcproj", "{F6765CAB-2BE5-417E-9DFB-1DB03DFD1ECB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{838EA109-BDC7-4242-A9FB-39240980BAF7} = {838EA109-BDC7-4242-A9FB-39240980BAF7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestGDI_AddFontRes", "TestGDI_AddFontRes\TestGDI_AddFontRes.vcproj", "{48C64B06-1F9A-41DF-92BE-0C193777E2A1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{838EA109-BDC7-4242-A9FB-39240980BAF7} = {838EA109-BDC7-4242-A9FB-39240980BAF7}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestGDIPlus_AddFontFile", "TestGDIPlus_AddFontFile\TestGDIPlus_AddFontFile.vcproj", "{DB3F0695-B4B0-41DC-9186-1BC9B074CB72}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestGDIPlus_AddMemFont", "TestGDIPlus_AddMemFont\TestGDIPlus_AddMemFont.vcproj", "{8AA2F831-7D27-4427-977B-D7599280969C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestGetFontFamilyName", "TestGetFontFamilyName\TestGetFontFamilyName.vcproj", "{1F30D0AF-F1B8-4757-9BC9-96E3F81D8D74}"
+	ProjectSection(ProjectDependencies) = postProject
+		{838EA109-BDC7-4242-A9FB-39240980BAF7} = {838EA109-BDC7-4242-A9FB-39240980BAF7}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{838EA109-BDC7-4242-A9FB-39240980BAF7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{838EA109-BDC7-4242-A9FB-39240980BAF7}.Debug|Win32.Build.0 = Debug|Win32
+		{838EA109-BDC7-4242-A9FB-39240980BAF7}.Release|Win32.ActiveCfg = Release|Win32
+		{838EA109-BDC7-4242-A9FB-39240980BAF7}.Release|Win32.Build.0 = Release|Win32
+		{F6765CAB-2BE5-417E-9DFB-1DB03DFD1ECB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F6765CAB-2BE5-417E-9DFB-1DB03DFD1ECB}.Debug|Win32.Build.0 = Debug|Win32
+		{F6765CAB-2BE5-417E-9DFB-1DB03DFD1ECB}.Release|Win32.ActiveCfg = Release|Win32
+		{F6765CAB-2BE5-417E-9DFB-1DB03DFD1ECB}.Release|Win32.Build.0 = Release|Win32
+		{48C64B06-1F9A-41DF-92BE-0C193777E2A1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{48C64B06-1F9A-41DF-92BE-0C193777E2A1}.Debug|Win32.Build.0 = Debug|Win32
+		{48C64B06-1F9A-41DF-92BE-0C193777E2A1}.Release|Win32.ActiveCfg = Release|Win32
+		{48C64B06-1F9A-41DF-92BE-0C193777E2A1}.Release|Win32.Build.0 = Release|Win32
+		{DB3F0695-B4B0-41DC-9186-1BC9B074CB72}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DB3F0695-B4B0-41DC-9186-1BC9B074CB72}.Debug|Win32.Build.0 = Debug|Win32
+		{DB3F0695-B4B0-41DC-9186-1BC9B074CB72}.Release|Win32.ActiveCfg = Release|Win32
+		{DB3F0695-B4B0-41DC-9186-1BC9B074CB72}.Release|Win32.Build.0 = Release|Win32
+		{8AA2F831-7D27-4427-977B-D7599280969C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8AA2F831-7D27-4427-977B-D7599280969C}.Debug|Win32.Build.0 = Debug|Win32
+		{8AA2F831-7D27-4427-977B-D7599280969C}.Release|Win32.ActiveCfg = Release|Win32
+		{8AA2F831-7D27-4427-977B-D7599280969C}.Release|Win32.Build.0 = Release|Win32
+		{1F30D0AF-F1B8-4757-9BC9-96E3F81D8D74}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1F30D0AF-F1B8-4757-9BC9-96E3F81D8D74}.Debug|Win32.Build.0 = Debug|Win32
+		{1F30D0AF-F1B8-4757-9BC9-96E3F81D8D74}.Release|Win32.ActiveCfg = Release|Win32
+		{1F30D0AF-F1B8-4757-9BC9-96E3F81D8D74}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
