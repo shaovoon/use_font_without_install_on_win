@@ -2,7 +2,7 @@
 
 Source code for the CodeProject article of [How to Use a Font Without Installing it](https://www.codeproject.com/Articles/42041/How-to-Use-a-Font-Without-Installing-it)
 
-### Table of Contents
+## Table of Contents
 
 
 * Introduction
@@ -19,13 +19,13 @@ Source code for the CodeProject article of [How to Use a Font Without Installing
 
 ![SampleFont.png](/images/SampleFont.png)
 
-### Introduction
+## Introduction
 
 Many times, a particular font needs to be used in an application due to the in-house graphics designer&#39;s font choice. In order for the application to use the fonts, the font needs to be installed using the installer. Too many fonts on the user machine may slow the system down considerably.
 
 You can actually get away without installing the font: GDI and GDI+ each provide two ways for you, as a programmer, to add a font for an application to use without installing it. I&#39;ll show you how in this article!
 
-### GDI&#39;s AddFontResourceEx
+## GDI&#39;s AddFontResourceEx
 
 Let me first talk about GDI&#39;s two functions for adding fonts to an application for use. I&#39;ll then talk about GDI+&#39;s own functions. You can use [AddFontResourceEx](http://msdn.microsoft.com/en-us/library/dd183327%28VS.85%29.aspx) to add a physical font file for an application to use.
 
@@ -96,7 +96,7 @@ BOOL b = RemoveFontResourceEx(
     );
 ```
 
-### GDI&#39;s AddFontMemResourceEx
+## GDI&#39;s AddFontMemResourceEx
 
 If our font is in a resource DLL, cabinet file, or archival compressed file, you can extract it into memory and then use [AddFontMemResourceEx](http://msdn.microsoft.com/en-us/library/dd183325%28VS.85%29.aspx) to read it from memory.
 
@@ -154,7 +154,7 @@ if(m_fonthandle)
 }
 ```
 
-### GDI+&#39;s PrivateFontCollection&#39;s AddFontFile
+## GDI+&#39;s PrivateFontCollection&#39;s AddFontFile
 
 For GDI+, you can use its `PrivateFontCollection` class member [AddFontFile](http://msdn.microsoft.com/en-us/library/ms534992%28VS.85%29.aspx) to add a physical font file.
 
@@ -193,7 +193,7 @@ if(nNumFound>0)
 
 __Note__: Unlike GDI&#39;s `AddFontResourceEx` and `AddFontMemResourceEx`, there is no `RemoveFontFile` for `AddFontFile`. All added fonts will be removed by `PrivateFontCollection`&#39;s destructor.
 
-### GDI+&#39;s PrivateFontCollection&#39;s AddMemoryFont
+## GDI+&#39;s PrivateFontCollection&#39;s AddMemoryFont
 
 For GDI+, you can use its `PrivateFontCollection` class member [AddMemoryFont](http://msdn.microsoft.com/en-us/library/ms534993%28VS.85%29.aspx) to add a font in memory.
 
@@ -225,7 +225,7 @@ if (res)
 
 As to how to use the font you have just added to the `PrivateFontCollection` object, `m_fontcollection`, please refer to the previous `AddFontFile` example, they are the same.
 
-### Getting TTF and TTC Font Names
+## Getting TTF and TTC Font Names
 
 I have written two classes, namely `TTF` and `TTC` to read the font name from the TTF/OTF and TTC font files, respectively. To support Matroska (_mkv_) file font reading or embedded font resource reading, my `TTF` and `TTC` classes support parsing the font file in memory. For your information, these Matroska files usually contain video channels, audio channels for multiple languages, subtitles, and the fonts used for the subtitles in the video. My classes are really easy to use. Below is an example to read a TTF file physically or in memory and display its information:
 
@@ -383,7 +383,7 @@ dc.SelectObject(pOldFont);
 
 __Note__: I could not find enough information on the web to parse a fon file which is a font file with the "fon" extension. I tried reverse engineering to get the file name, but failed. However, I will continue trying.
 
-### Add Font File to a Resource
+## Add Font File to a Resource
 
 To add a font file to a resource section, please follow my walkthrough example. Please note my method is to edit the resource file directly, instead of adding it though the IDE&#39;s resource editor because in my experience, the resource editor has the tendency to mess up the resource&#39;s rc file, rendering the WYSIWYG dialog editor unusable. __Note__: The latest resource editor may be more robust and stable now. To add a font file, we must assign a resource ID to refers to the font. To do this, close your solution or project in concern, if they are opened. To assign a resource ID, open up _Resource.h_:
 
@@ -455,17 +455,17 @@ As the RC code shows, `IDR_MYFONT `is a binary resource which references a _SkiC
 
 If you find adding a font to resource is a hassle, you can rename the font filename and its extension, so that nobody will know that file is a font and mess with it. You can even encrypt or compress it. Just decrypt it or uncompress it in memory before reading file in memory.
 
-### Conclusion
+## Conclusion
 
 You have seen two methods from GDI and GDI+ each, to either load font files physically or from memory and use them. I hope this may remove the need for programmers to install fonts on user machine to use them. I have introduced two classes to read TTF and TTC font files for their font names. Anything you do like or not like about this article, please let me know, so that I can improve on this article. I do hope you enjoy reading my article!
 
-### Reference
+## Reference
 
 
 * [Microsoft Typography](http://www.microsoft.com/typography/default.mspx)
 
 
-### History
+## History
 
 
 * 14<sup>th</sup> September, 2009 - Added a section on how to add the font to the resource
