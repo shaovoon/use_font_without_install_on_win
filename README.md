@@ -17,7 +17,7 @@ Source code for the CodeProject article of [How to Use a Font Without Installing
 * History
 
 
-![samplefont.png](/images/samplefont.png)
+![SampleFont.png](/images/SampleFont.png)
 
 ### Introduction
 
